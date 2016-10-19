@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 					sassDir: 'assets/sass',
 					cssDir: 'assets/css',
 					environment: 'production',
-					require: ['susy', 'breakpoint']
+					require: ['susy', 'breakpoint'],
+					noLineComments: true
 				}
 			}
 		},
@@ -18,6 +19,18 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		browserSync: {
+			bsFiles: {
+				src: [
+					'assets/sass/*.scss',
+					'index.html'
+				]
+			},
+			options: {
+				watchTask: true,
+				server: './'
+			}
+		},
 		watch: {
 			css: {
 				files: 'assets/sass/*.scss',
@@ -25,8 +38,9 @@ module.exports = function(grunt) {
 			}
 		}
 	});
+	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['browserSync', 'watch']);
 }
