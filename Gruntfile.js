@@ -19,6 +19,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		cssmin: {
+			minify: {
+				expand: true,
+				src: 'assets/css/*.css'
+			}
+		},
 		browserSync: {
 			bsFiles: {
 				src: [
@@ -34,10 +40,11 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: 'assets/sass/*.scss',
-				tasks: ['compass', 'autoprefixer:css']
+				tasks: ['compass', 'autoprefixer:css', 'cssmin:minify']
 			}
 		}
 	});
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-compass');
