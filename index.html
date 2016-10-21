@@ -65,22 +65,89 @@
 		</section><!-- /.goods-section -->
 	</main>
 
-	<div class="cart-modal modal">
+	<div class="modal">
 		<div class="modal-blackening"></div>
 		<div class="modal-body">
 
-			<div class="cart">
-				<div class="cart-header">
-					<div class="cart-header-info">
-						<p>Количество товаров:<span>03</span></p>
+			<form class="cart-modal">
+				<div class="cart-modal_header">
+					<div class="cart-modal-header_count">
+						<h3>Количество товаров:<span>03</span></h3>
 					</div>
 				</div><!-- /.cart-header -->
 
-				<div class="cart-body">
-					div.
+				<div class="cart-modal_body">
+
+					<div class="item">
+						<div class="item-photo">
+							<img src="" alt="">
+						</div>
+						<div class="item-info">
+							<p class="item-info_name"></p>
+							<p class="item-info_description"></p>
+							<select>
+								<option>Полуторный</option>
+								<option>Полуторный</option>
+								<option>Полуторный</option>
+							</select>
+						</div><!-- /.item-info -->
+						<div class="item-additional">
+							<div class="item-additional_count">
+								<p></p>
+								<input type="number" name="">
+							</div>
+							<div class="item-additional_checkbox">
+								<p></p>
+								<label for="1"></label>
+								<input type="checkbox" id="1" name="">
+							</div>
+						</div><!-- /.item-additional -->
+						<div class="item-count-total">
+							<input type="number" name="">
+						</div>
+						<div class="item-price">
+							<p><span class="item-price_number"></span></p>
+						</div>
+						<div class="item-delete">
+							<a href=""><img src="" alt=""></a>
+						</div>
+					</div><!-- /.item -->
+					<div class="cart-total-price">
+						<p>Всего:<span>10.000</span>грн</p>
+					</div>
+
+					<a class="close-button"><img src="" alt=""></a>
+				</div><!-- /.cart-modal-body -->
+
+				<div class="cart-modal_margin">
+					<img src="" alt="">
 				</div>
 
-			</div><!-- /.cart -->
+				<div class="user-info">
+					<h3></h3>
+					<div class="user-info_column">
+						<input type="text" name="" placeholder="">
+						<input type="email" name="" placeholder="">
+						<input type="text" name="" placeholder="">
+					</div>
+					<div class="user-info_column">
+						<input type="text" name="" placeholder="">
+						<select>
+							<option></option>
+							<option></option>
+						</select>
+						<select>
+							<option></option>
+							<option></option>
+						</select>
+					</div>
+					<div class="user-info_column">
+						<textarea placeholder=""></textarea>
+					</div>
+					<input type="submit" name="">
+				</div>
+
+			</form><!-- /.cart -->
 		</div><!-- /.modal-body -->
 	</div><!-- /.cart-modal modal -->
 </body>
