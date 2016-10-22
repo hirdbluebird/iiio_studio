@@ -3,17 +3,11 @@ module.exports = function(grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: 'assets/sass/style.scss',
+					sassDir: 'assets/scss/',
 					cssDir: 'assets/css',
-					environment: 'production',
-					require: 'susy',
-					noLineComments: true
-				}
-			},
-			div: {
-				options: {
-					sassDir: 'assets/sass/style.scss',
-					cssDir: 'assets/css'
+					environment: 'development',
+					outputStyle: 'compressed',
+					require: 'susy'
 				}
 			}
 		},
@@ -34,7 +28,7 @@ module.exports = function(grunt) {
 		browserSync: {
 			bsFiles: {
 				src: [
-					'assets/sass/modules/*.scss',
+					'assets/sass/*.scss',
 					'index.html'
 				]
 			},
@@ -45,7 +39,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			css: {
-				files: 'assets/sass/*.scss',
+				files: 'assets/scss/modules/*.scss',
 				tasks: ['compass', 'autoprefixer:css', 'cssmin:minify']
 			}
 		}
