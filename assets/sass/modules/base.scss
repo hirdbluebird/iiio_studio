@@ -1,0 +1,7 @@
+body {
+	font-family: 'PT Sans', 'sans-serif';
+}
+
+.container {
+	@include container(1000px);
+}

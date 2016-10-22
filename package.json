@@ -17,12 +17,14 @@
   },
   "homepage": "https://github.com/hirdbluebird/iiio_studio#readme",
   "devDependencies": {
+    "breakpoint": "^0.1.6",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
-    "node-normalize-scss": "^1.4.0"
+    "node-normalize-scss": "^1.4.0",
+    "susy": "^2.2.12"
   }
 }
