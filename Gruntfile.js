@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 		browserSync: {
 			bsFiles: {
 				src: [
-					'assets/sass/*.scss',
+					'assets/scss/modules/*.scss',
 					'index.html'
 				]
 			},

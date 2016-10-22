@@ -1,0 +1,76 @@
+header {
+	min-height: 514px;
+	background-image: url('../img/header-background.png');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+.header-link {
+	background-color: $color-pink-light;
+	color: $color-pink-dark;
+	padding: 10px;
+	vertical-align: middle;
+	& > * {
+		display: inline-block;
+	}
+}
+.header-callback-link {
+	&:before {
+	}
+	div {
+		border-left: 1px white solid;
+		border-top-left-radius: 40%/50%;
+		img {
+			margin-top: 7px;
+		}
+	}
+}
+.header-email-link {
+	div {
+		border-right: 1px solid white;
+	}
+}
+.header-left-strip,
+.header-right-strip {
+	background-color: $color-pink-light;
+	width: 100%;
+	position: relative;
+}
+.header-left-strip {
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 500px;
+		background: $color-pink-light;
+	}
+	a {
+		color: $color-pink-dark;
+	}
+}
+.header-right-strip {
+	a {
+		color: #535353;
+	}
+}
+.subnav-left-bottom,
+.subnav-right-bottom {
+	a img {
+		width: auto;
+	}
+	a:hover img {
+		visibility: hidden;
+	}
+}
+// navbar image links on hover in header
+
+.nav-ranf-link {
+	background-image: url('../img/ranf-active.png');
+	background-repeat: no-repeat;
+}
