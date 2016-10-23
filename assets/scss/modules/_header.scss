@@ -49,6 +49,7 @@ header {
 		width: 100%;
 		left: 500px;
 		background: $color-pink-light;
+		transform: rotate(-180deg);
 	}
 	a {
 		color: $color-pink-dark;
@@ -61,16 +62,36 @@ header {
 }
 .subnav-left-bottom,
 .subnav-right-bottom {
-	a img {
-		width: auto;
+	a {
+		display: inline-block;
+		background-repeat: no-repeat;
 	}
-	a:hover img {
-		visibility: hidden;
+	a img {
+		transition: all linear 0.5s;
+	}
+	a:hover {
+		img {
+			opacity: 0;
+		}
 	}
 }
-// navbar image links on hover in header
 
-.nav-ranf-link {
+/********** navbar image links on hover in header ***********/
+.nav-ranf-link:hover {
 	background-image: url('../img/ranf-active.png');
-	background-repeat: no-repeat;
+}
+.nav-satin-link:hover {
+	background-image: url('../img/satin-active.png');
+}
+.nav-kids-link:hover {
+	background-image: url('../img/kids-active.png');
+}
+.nav-aboutus-link:hover {
+	background-image: url('../img/about-us-active.png');
+}
+.nav-delivery-link:hover {
+	background-image: url('../img/delivery-active.png');
+}
+.nav-cart-link:hover {
+	background-image: url('../img/cart-active.png');
 }

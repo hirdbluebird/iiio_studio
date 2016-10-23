@@ -1,0 +1,17 @@
+.aquamarine-background-section {
+	background-color: $color-aquamarine-light;
+}
+.cotton-background-section {
+	background-image: url('../img/cotton-left-background.png'), url('../img/cotton-right-background.png') ;
+	background-position: left top, right top;
+	background-repeat: no-repeat;
+}
+.goods-slider {
+	@include container();
+	.goods {
+		@include span(3 of 12);
+		&:last-child {
+			@include span(last);
+		}
+	}
+}
