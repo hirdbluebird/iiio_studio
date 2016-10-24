@@ -9,57 +9,6 @@ header {
 		justify-content: center;
 	}
 }
-.header-link {
-	background-color: $color-pink-light;
-	color: $color-pink-dark;
-	padding: 10px;
-	vertical-align: middle;
-	& > * {
-		display: inline-block;
-	}
-}
-.header-callback-link {
-	&:before {
-	}
-	div {
-		border-left: 1px white solid;
-		border-top-left-radius: 40%/50%;
-		img {
-			margin-top: 7px;
-		}
-	}
-}
-.header-email-link {
-	div {
-		border-right: 1px solid white;
-	}
-}
-.header-left-strip,
-.header-right-strip {
-	background-color: $color-pink-light;
-	width: 100%;
-	position: relative;
-}
-.header-left-strip {
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		left: 500px;
-		background: $color-pink-light;
-		transform: rotate(-180deg);
-	}
-	a {
-		color: $color-pink-dark;
-	}
-}
-.header-right-strip {
-	a {
-		color: #535353;
-	}
-}
 .subnav-left-bottom,
 .subnav-right-bottom {
 	a {
@@ -75,7 +24,58 @@ header {
 		}
 	}
 }
-
+/********** header links with callback and delivery ***********/
+.header-link {
+	position: relative;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	background-color: $color-pink-light;
+	color: $color-pink-dark;
+	& > div {
+		display: inline-block;
+		line-height: 32px;
+	}
+}
+.header-callback-link {
+	padding-left: 10px;
+	& > div {
+		padding: 0px 7px;
+		border-left: 2px white solid;
+		border-top-left-radius: 2em;
+		border-bottom-left-radius: 1.5em;
+		img {
+			margin-top: 7px;
+		}
+	}
+	&:after {
+		content: url('../img/heart-additional.png');
+		position: absolute;
+		display: inline-block;
+		right: -34px;
+		bottom: -4px;
+	}
+}
+.header-email-link {
+	padding-right: 10px;
+	margin-left: 50px;
+	& > div {
+		padding: 0 7px;
+		border-right: 2px white solid;
+		border-top-right-radius: 2em;
+		border-bottom-right-radius: 1.5em;
+		color: white;
+		font-weight: bold;
+	}
+	&:before {
+		content: url('../img/heart-additional.png');
+		position: absolute;
+		display: inline-block;
+		left: -34px;
+		bottom: -4px;
+		transform: scaleX(-1);
+	}
+}
 /********** navbar image links on hover in header ***********/
 .nav-ranf-link:hover {
 	background-image: url('../img/ranf-active.png');
@@ -94,4 +94,64 @@ header {
 }
 .nav-cart-link:hover {
 	background-image: url('../img/cart-active.png');
+}
+/********** Ribbon nav menu ******************/
+.header-left-strip,
+.header-right-strip {
+	background-color: $color-pink-light;
+	width: 100%;
+	position: relative;
+	line-height: 27px;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 9999px;
+		background: $color-pink-light;
+	}
+}
+.header-left-strip {
+	&:before {
+		left: -9999px;
+	}
+	a {
+		color: $color-pink-dark;
+	}
+}
+.header-right-strip {
+	&:before {
+		left: 100%;
+	}
+	a {
+		color: #535353;
+	}
+}
+/******** Center block input search styles *********/
+.header-search-form {
+	position: relative;
+	margin-top: 25px;
+	input {
+		width: 100%;
+		padding: 5px 0px;
+		border: none;
+	}
+	label {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		&:after,
+		&:before {
+			position: absolute;
+			width: 100%;
+		}
+		&:before {
+			content: url('../img/search-border-top.png');
+			top: -18px;
+		}
+		&:after {
+			content: url('../img/search-border-bottom.png');
+			bottom: -21px;
+		}
+	}
 }
