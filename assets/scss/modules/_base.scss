@@ -11,6 +11,8 @@ a {
 }
 section {
 	min-height: 345px;
+	display: flex;
+	align-items: center;
 }
 figure {
 	margin: 0px;

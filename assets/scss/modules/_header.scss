@@ -96,10 +96,9 @@ header {
 	background-image: url('../img/cart-active.png');
 }
 /********** Ribbon nav menu ******************/
-.header-left-strip,
-.header-right-strip {
+.subnav-right-top,
+.subnav-left-top, {
 	background-color: $color-pink-light;
-	width: 100%;
 	position: relative;
 	line-height: 27px;
 	&:before {
@@ -111,17 +110,36 @@ header {
 		background: $color-pink-light;
 	}
 }
-.header-left-strip {
+.subnav-left-top {
+	margin-right: 45px;
 	&:before {
 		left: -9999px;
+	}
+	&:after {
+		content: url('../img/strip.png');
+		display: inline-block;
+		position: absolute;
+		right: -45px;
+		transform: scaleX(-1);
+		background-color: transparent;
+		bottom: -7px;
 	}
 	a {
 		color: $color-pink-dark;
 	}
 }
-.header-right-strip {
+.subnav-right-top {
+	margin-left: 45px;
 	&:before {
 		left: 100%;
+	}
+	&:after {
+		content: url('../img/strip.png');
+		display: inline-block;
+		position: absolute;
+		left: -45px;
+		bottom: -7px;
+		background-color: transparent;
 	}
 	a {
 		color: #535353;
@@ -132,9 +150,19 @@ header {
 	position: relative;
 	margin-top: 25px;
 	input {
+		@include placeholder-color(#a0d4da);
+		box-sizing: border-box;
 		width: 100%;
-		padding: 5px 0px;
+		padding-left: 32px;
 		border: none;
+		background-image: url('../img/search-inactive.png');
+		background-position: center right 32px;
+		background-repeat: no-repeat;
+		&:focus {
+			outline: none;
+			background-image: url('../img/search-active.png');
+			background-position: center right 22px;
+		}
 	}
 	label {
 		position: absolute;
